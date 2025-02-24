@@ -1,0 +1,303 @@
+/* Start general rules */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.1s linear;
+}
+body{
+    font-size: 22px;
+    height: fit-content;
+    background: oldlace;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+li{
+    list-style-type: none;
+    display: inline-block;
+}
+button{
+    border: none;
+}
+.container{
+    width: 88%;
+    margin: auto;
+}
+.clear{
+    clear: both;
+}
+.left-div,.right-div{
+    width: 50%;
+    height:100%;
+}
+.left-div{
+    float: left;
+}
+.right-div{
+    float: right;
+}
+.welcome-area::before,.contact-us::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+ }
+/* End general rules */
+
+/* Start First Section for header-area */
+.header-area{
+    width: 100%;
+}
+
+/* start section 1 of header-area  */
+
+.info-icons{
+    background: #0e2737;
+    color:aliceblue;
+}
+.contact{
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+}
+.my-contact{
+    float: left;
+}
+.icons{
+    float: right;
+}
+.contact a{
+    color:aliceblue;
+    margin: 0 30px 0 10px;
+}
+.contact  .instagram{
+    margin: 0 0 0 10px;
+}
+.contact a:hover{
+    color: rgba(240, 248, 255, 0.526);
+}
+
+/* end section 1 of header-area  */
+
+/* start section 2 of header-area  */
+.nav{
+    height: 100px;
+    line-height: 100px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.nav img{
+    float: left;
+    margin:32px 0;
+}
+.nav ul{
+    float: right;
+}
+.nav ul li{
+    margin-left:32px;
+}
+.nav li a{
+    color: #2a303b;
+}
+.nav li a:hover{
+    color: #afb4bf;
+}
+.nav li .bg-color{
+    background: #1cc3b2;
+    height: 100px;
+    padding: 0 20px;
+    color: #fff;
+   
+}
+.nav li .bg-color:hover{
+    background:#2a303b ;
+    color: #fff;
+}
+.menue{
+    position: relative;
+}
+.sub-menue{
+    position: absolute;
+    top:80px;
+    left: -25px;
+    background:#fff;
+    border-radius: 10px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+}
+.menue:hover .sub-menue{
+    visibility:visible;
+    opacity: 1;
+}
+.sub-menue li{
+    display: block;
+    width: 200px;
+    padding: 15px 10px;
+    line-height: 30px;
+    position: relative;
+}
+.sub-menue li a{
+    color: #0e2737;
+    margin-left: 5px;
+}
+.sub-menue a::before{
+    content: "";
+    width: 10px;
+    height: 3px;
+    background: #0e2737;
+    position: absolute;
+    left: 0;
+    top: 27px;
+}
+.sub-menue a:hover::before{
+    background: #afb4bf;
+}
+/* end section 2 of header-area  */
+
+/* End First Section for header-area */
+/* start fifth Section for external-services */
+
+.ex-services{
+    width: 100%;
+    height: 700px;
+}
+.ex-services > div{
+    width: 33.3334%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.ex-services div img{
+    width: 100%;
+    height: 100%;
+}
+.ex-services div .overlay{
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    z-index: 5;
+    background: #00000070;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+.ex-services div:hover .overlay{
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+.ex-services div .icons,.ex-services div .info{
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1.5s;
+    overflow: hidden;
+}
+.ex-services div .icons{
+    width: 0;
+    height: 200px;
+    right: 0;
+    top: 50px;
+}
+.ex-services div:hover .icons{
+    width: 50px;
+    opacity: 1;
+    visibility: visible;
+}
+.ex-services div .icons a{
+    color: #fff;
+    font-size: 32px;
+    margin: 10px 0;
+}
+.ex-services div .info{
+    width: 100%;
+    height: 0;
+    bottom: 0;
+}
+.ex-services div:hover .info{
+    height: 350px;
+    opacity: 1;
+    visibility: visible;
+}
+.ex-services div .entertaiment,.ex-services div .info a{
+    width: 100%;
+    color: #fff;
+    position: relative;
+    z-index: 100;
+    transition: all 0.5s linear;
+}
+.ex-services div .info a:hover{
+    color: #0e2737;
+}
+.ex-services div .info a::after,.ex-services div .entertaiment::after{
+    width: 0%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s linear;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    background-color: #ffffff;
+}
+.ex-services div .entertaiment::before{
+    width: 0%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 1s linear;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    background-color: #ffffff;
+}
+.ex-services div .entertaiment:hover{
+    color: #1cc3b2;
+}
+.ex-services div .entertaiment:hover::before{
+    width: 50%;
+    visibility: visible;
+    opacity: 1;
+}
+.ex-services div .entertaiment:hover::after{
+    width: 50%;
+    visibility: visible;
+    opacity: 1;
+}
+.ex-services div .info a:hover::after{
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+}
+.ex-services div .entertaiment{
+    height: 250px;
+    background: #1cc3b2;
+    padding: 20px;
+    line-height: 40px;
+}
+.ex-services div .entertaiment h3{
+    margin: 10px 0;
+}
+.ex-services div .info a{
+    height: 100px;
+    padding: 0 20px;
+    line-height: 100px;
+    background: #0e2737;
+}
+i:hover{
+    opacity: 0.7;
+}
+/* End fifth Section for external-services */
